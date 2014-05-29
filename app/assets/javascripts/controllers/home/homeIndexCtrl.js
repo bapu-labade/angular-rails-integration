@@ -3,8 +3,8 @@ function IndexCtrlController($scope, $location, $http, $routeParams) {
 	// $scope.posts = [{title: 'My first post', contents: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit'},
 	// {title: 'My first post', contents: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit'} ]
 
-  $scope.postId = $routeParams.postId
-
+  // $scope.postId = $routeParams.postId
+  // console.log(postId);
   $scope.posts =  [ {title: 'Loading posts...', contents: ''} ]
 
   function loadPosts() {
@@ -23,7 +23,7 @@ function IndexCtrlController($scope, $location, $http, $routeParams) {
 
   loadPosts();
 
-  $scope.showPost = function (postId){
-  	$location.url('/post/'+postId)
+  $scope.showPost = function (id){
+  	$location.url('/posts/'+id)
   }
 };

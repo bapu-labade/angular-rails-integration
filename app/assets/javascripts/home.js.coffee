@@ -11,7 +11,7 @@ Blog = angular.module('Blog', ['ngRoute'])
 # Sets up routing
 Blog.config(['$routeProvider', ($routeProvider) ->
   # Route for '/post'
-  $routeProvider.when('/post/:postId', { templateUrl: '../assets/showPost.html', controller: 'showCtrlController' } )
+  $routeProvider.when('/posts/:id', { templateUrl: '../assets/showPost.html', controller: 'showCtrlController' } )
 
   # Default
   $routeProvider.otherwise({ templateUrl: '../assets/mainIndex.html', controller: 'IndexCtrlController' } )

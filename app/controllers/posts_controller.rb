@@ -4,15 +4,20 @@ class PostsController < ApplicationController
 
 
   def index
-  
     # Gather all post data
     posts = Post.all
-
     # Respond to request with post data in json format
     respond_with(posts) do |format|
       format.json { render :json => posts.as_json }
     end
+  end
 
+
+  def show
+    post = Post.find(params[:id])
+    respond_with(post) do |format|
+    	format.json {render :json => post.as_json}
+    end
   end
 
 end
